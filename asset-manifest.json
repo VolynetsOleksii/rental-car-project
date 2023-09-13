@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/rental-car-project/static/css/main.073c9b0a.css",
+    "main.js": "/rental-car-project/static/js/main.e39e34f1.js",
+    "static/js/787.1c6c7f8b.chunk.js": "/rental-car-project/static/js/787.1c6c7f8b.chunk.js",
+    "static/media/logo.svg": "/rental-car-project/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/rental-car-project/index.html",
+    "main.073c9b0a.css.map": "/rental-car-project/static/css/main.073c9b0a.css.map",
+    "main.e39e34f1.js.map": "/rental-car-project/static/js/main.e39e34f1.js.map",
+    "787.1c6c7f8b.chunk.js.map": "/rental-car-project/static/js/787.1c6c7f8b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.e39e34f1.js"
+  ]
+}
