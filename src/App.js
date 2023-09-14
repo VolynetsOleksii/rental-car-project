@@ -1,11 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import HomePage from "./pages/HomePage";
-import CatalogPage from "./pages/CatalogPage";
-import FavoritesPage from "./pages/FavoritesPage";
+import HomePage from "./pages/HomePage/HomePage";
+import CatalogPage from "./pages/CatalogPage/CatalogPage";
+import FavoritesPage from "./pages/FavoritesPage/FavoritesPage";
 import { SharedLayout } from "./components/SharedLayout/SharedLayout";
 
+
 function App() {
+  
   return (
     <div>
       <Routes>

@@ -5,10 +5,14 @@ import SideBar from "../SideBar/SideBar";
 export const SharedLayout = () => {
   return (
     <div>
-      <SideBar />
-      <Suspense fallback={null}>
-        <Outlet />
-      </Suspense>
+      <header>
+        <SideBar />
+      </header>
+      <main>
+        <Suspense fallback={null}>
+          <Outlet />
+        </Suspense>
+      </main>
     </div>
   );
 };
