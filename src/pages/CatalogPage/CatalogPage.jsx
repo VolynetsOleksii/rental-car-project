@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import CardList from '../../components/CardList/CardList';
 import { fetchAdverts, limit } from '../../services/advertsApi';
+import { LoadMoreButton } from './CatalogPage.styled';
 
 const CatalogPage = () => {
   
@@ -19,15 +20,16 @@ const CatalogPage = () => {
   const handleLoadMoreClick = () => {
     setPage((prev) => prev + 1);
   };
+  console.log('adverts: ', adverts);
 
   return (
     <div>
       CatalogPage
      {adverts.length > 0  && (<CardList adverts={adverts}/>)}
      {adverts.length > 0 && (adverts.length)%limit === 0 && (
-        <button type="button" onClick={handleLoadMoreClick}>
+        <LoadMoreButton type="button" onClick={handleLoadMoreClick}>
           Load more
-        </button>
+        </LoadMoreButton>
       )}
       </div>
   )
