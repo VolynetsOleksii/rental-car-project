@@ -21,10 +21,8 @@ export const P = styled.p`
   font-size: 16px;
   line-height: 24px;
   font-weight: 600;
-  margin-bottom: 8px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  
+  
   span {
     color: #3470ff;
   }
@@ -33,6 +31,13 @@ export const P = styled.p`
 export const TitleWraper = styled.div`
   display: flex;
   justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+`;
+export const TitleContainer = styled.div`
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
 `;
 
 export const InfoList = styled.ul`

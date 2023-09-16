@@ -5,6 +5,7 @@ export const LoadMoreButton = styled.button`
 //   height: 24px;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 150px;
   display: flex;
   align-items: center;
   justify-content: center;
