@@ -10,13 +10,17 @@ import { fetchAdverts } from "./services/advertsApi";
 function App() {
   const [adverts, setAdverts] = useState([]);
   const [page, setPage] = useState(1);
-  const [favorites, setFavorites] = useState([]);
-  const [favoriteCars, setFavoriteCars] = useState([]);
+  const [favorites, setFavorites] = useState([]);  // array of cars Id
+  const [favoriteCars, setFavoriteCars] = useState([]);  // array of cars
 
   useEffect(() => {
-    setFavoriteCars(JSON.parse(localStorage.getItem("favoriteCars")));
+    const data = JSON.parse(localStorage.getItem("favorites"));
+    if (data) {
+      setFavorites(data);
+     }
+    
   }, []);
-  
+
   useEffect(() => {
     (async () => {
       const data = await fetchAdverts(page);
@@ -25,17 +29,17 @@ function App() {
     })();
   }, [page]);
 
-  const handleLoadMoreClick = () => {
-    setPage((prev) => prev + 1);
-  };
-
   useEffect(() => {
     const favoriteList = adverts.filter((advert) =>
       favorites.includes(advert.id)
     );
     setFavoriteCars(favoriteList);
-    localStorage.setItem("favoriteCars", JSON.stringify(favoriteList));
+    
   }, [favorites, adverts]);
+
+  const handleLoadMoreClick = () => {
+    setPage((prev) => prev + 1);
+  };
 
   const addFavorite = (e) => {
     const id = parseInt(e.id);
@@ -49,6 +53,7 @@ function App() {
     }
 
     setFavorites(updatedFavorites);
+    localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
   };
 
   return (
