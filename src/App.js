@@ -10,15 +10,14 @@ import { fetchAdverts } from "./services/advertsApi";
 function App() {
   const [adverts, setAdverts] = useState([]);
   const [page, setPage] = useState(1);
-  const [favorites, setFavorites] = useState([]);  // array of cars Id
-  const [favoriteCars, setFavoriteCars] = useState([]);  // array of cars
+  const [favorites, setFavorites] = useState([]); // array of cars Id
+  const [favoriteCars, setFavoriteCars] = useState([]); // array of cars
 
   useEffect(() => {
     const data = JSON.parse(localStorage.getItem("favorites"));
     if (data) {
       setFavorites(data);
-     }
-    
+    }
   }, []);
 
   useEffect(() => {
@@ -34,7 +33,6 @@ function App() {
       favorites.includes(advert.id)
     );
     setFavoriteCars(favoriteList);
-    
   }, [favorites, adverts]);
 
   const handleLoadMoreClick = () => {
@@ -68,6 +66,7 @@ function App() {
                 adverts={adverts}
                 handleLoadMoreClick={handleLoadMoreClick}
                 addFavorite={addFavorite}
+                favoriteCars={favoriteCars}
               />
             }
           />

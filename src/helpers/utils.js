@@ -30,7 +30,7 @@ export const getFormatMileage = (advert) => {
 };
 
 export const getFormatRentalPrice = (advert) => {
-    const currencySymbol = advert.rentalPrice.charAt(0);
-    const numericPart = advert.rentalPrice.slice(1);
-    return `${numericPart}${currencySymbol}`;
-  };
+  const currencySymbol = advert.rentalPrice.charAt(0);
+  const numericPart = advert.rentalPrice.slice(1);
+  return `${numericPart}${currencySymbol}`;
+};

@@ -1,27 +1,25 @@
-import { ButtonWraper } from './FavoriteBtn.styled';
-import sprite from '../../assets/images/sprite.svg';
-import { useState } from 'react';
+import { ButtonWraper } from "./FavoriteBtn.styled";
+import sprite from "../../assets/images/sprite.svg";
 
-export const FavoriteBtn = ({ id, addFavorite }) => {
-  const [isLiked, setIsLiked] = useState(false);
+export const FavoriteBtn = ({ advert, addFavorite, favoriteCars }) => {
+  const carIsFavorite = favoriteCars.some(
+    (favoriteCar) => favoriteCar.id === advert.id
+  );
+  console.log('carIsFavorite: ', carIsFavorite);
 
-  const handleButtonLikeClick = e => {
-    setIsLiked(!isLiked);
-    addFavorite(e.currentTarget);
-    console.log('e.currentTarget: ', e.currentTarget);
-    
+  const handleButtonLikeClick = (e) => {
+     addFavorite(e.currentTarget);
   };
 
   return (
     <ButtonWraper
       onClick={handleButtonLikeClick}
       aria-label="like"
-      id={id}
-      selected={isLiked}
-      
+      id={advert.id}
+      selected={carIsFavorite}
     >
       <svg>
-        <use href={sprite + '#icon-like'}></use>
+        <use href={sprite + "#icon-like"}></use>
       </svg>
     </ButtonWraper>
   );

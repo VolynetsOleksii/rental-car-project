@@ -1,6 +1,5 @@
-import React from 'react'
-import { Nav, NavLink } from './Navigation.styled'
-
+import React from "react";
+import { Nav, NavLink } from "./Navigation.styled";
 
 const Navigation = () => {
   return (
@@ -9,7 +8,7 @@ const Navigation = () => {
       <NavLink to="/catalog">Catalog</NavLink>
       <NavLink to="/favorites">Favorites</NavLink>
     </Nav>
-  )
-}
+  );
+};
 
-export default Navigation
+export default Navigation;

@@ -1,12 +1,18 @@
-import React from 'react'
-import CardList from '../../components/CardList/CardList';
+import React from "react";
+import Card from "../../components/Card/Card";
+import { CardWraper } from "../../components/CardList/CardList.styled";
 
-const FavoritesPage = ({addFavorite, favoriteCars}) => {
+const FavoritesPage = ({ addFavorite, favoriteCars }) => {
   return (
-    <div>
-       {favoriteCars.length > 0 && <CardList adverts={favoriteCars} addFavorite={addFavorite}/>}
-    </div>
-  )
-}
+    <CardWraper>
+      {favoriteCars.length > 0 && (
+        favoriteCars.map((advert) => (
+          <Card key={advert.id} advert={advert} addFavorite={addFavorite} favoriteCars={favoriteCars} />
+        ))
+        // <CardList adverts={favoriteCars} addFavorite={addFavorite} />
+      )}
+    </CardWraper>
+  );
+};
 
 export default FavoritesPage;

@@ -1,12 +1,12 @@
-import React from 'react'
-import Navigation from '../Navigation/Navigation'
+import React from "react";
+import Navigation from "../Navigation/Navigation";
 
 const SideBar = () => {
   return (
     <header>
-        <Navigation/>
+      <Navigation />
     </header>
-  )
-}
+  );
+};
 
-export default SideBar
+export default SideBar;
