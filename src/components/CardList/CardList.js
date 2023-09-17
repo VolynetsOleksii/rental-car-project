@@ -4,11 +4,11 @@ import { CardWraper } from "./CardList.styled";
 
 
 
-const CardList = ({ adverts }) => {
+const CardList = ({ adverts, addFavorite }) => {
   return (
     <CardWraper>
       {adverts.map((advert) => (
-        <Card key={advert.id} advert={advert} />
+        <Card key={advert.id} advert={advert} addFavorite={addFavorite}/>
       ))}
     </CardWraper>
   );

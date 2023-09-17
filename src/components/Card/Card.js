@@ -12,19 +12,22 @@ import {
 import { Modal } from "../Modal/Modal";
 import PopUp from "../PopUp/PopUp";
 import { getCityFromAddress, getCountryFromAddress } from "../../helpers/utils";
+import { FavoriteBtn } from "../FavoriteBtn/FavoriteBtn";
 
-const Card = ({ advert }) => {
+const Card = ({ advert, addFavorite }) => {
   const [showModal, setShowModal] = useState(false);
   
   
   return (
     <CardWraper>
       <ImgWraper>
+      <FavoriteBtn id={advert.id} addFavorite={addFavorite}/>
         <img
           src={advert.img}
           alt={`${advert.make} ${advert.model}`}
           loading="lazy"
         />
+        
       </ImgWraper>
       <TitleWraper>
         <TitleContainer>

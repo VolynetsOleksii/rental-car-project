@@ -1,8 +1,11 @@
 import React from 'react'
+import CardList from '../../components/CardList/CardList';
 
-const FavoritesPage = () => {
+const FavoritesPage = ({addFavorite, favoriteCars}) => {
   return (
-    <div>FavoritesPage</div>
+    <div>
+       {favoriteCars.length > 0 && <CardList adverts={favoriteCars} addFavorite={addFavorite}/>}
+    </div>
   )
 }
 

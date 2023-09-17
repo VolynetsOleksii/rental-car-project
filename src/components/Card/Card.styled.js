@@ -6,6 +6,7 @@ export const CardWraper = styled.div`
 `;
 
 export const ImgWraper = styled.div`
+  position: relative;
   width: 274px;
   height: 268px;
   margin-bottom: 14px;

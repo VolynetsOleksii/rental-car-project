@@ -4,6 +4,7 @@ export const CardWraper = styled.div`
   width: 1184px;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 80px;
   margin-bottom: 100px;
   display: flex;
   flex-direction: row;
